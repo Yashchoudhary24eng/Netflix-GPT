@@ -26,7 +26,7 @@ const VideoContainer = ({movies}) => {
 
   return (
     <div className='inset-0 overflow-hidden'>
-        <iframe  className=' w-screen scale-150 aspect-video -z-10'
+        <iframe  className=' w-screen scale-150 aspect-video'
         src={"https://www.youtube.com/embed/"+movie?.key + "?&autoplay=1&mute=1"} 
         title="YouTube video player" 
        

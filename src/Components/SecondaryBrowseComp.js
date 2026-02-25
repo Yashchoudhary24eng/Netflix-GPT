@@ -12,7 +12,7 @@ const SecondaryBrowseComp = () => {
     const popular = usePopularMovies();
     const toprated = useTopRatedMovies();
     const upcoming = useUpComingMovies();
-    console.log(movies);
+    
 
   return (
     <div className='bg-black'>
