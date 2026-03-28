@@ -5,11 +5,17 @@ import SecondaryBrowseComp from './SecondaryBrowseComp'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import Shimmer from './Shimmer'
 import GptPage from './GptPage'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addSearchData } from '../Utils/GptSearchStore'
 
 const Browse = () => {
 
    const gptpage = useSelector((store)=> store.gpt.gptinitialvalue);
+
+   const dispatch = useDispatch();
+
+   if(gptpage) dispatch(addSearchData(null));
+
 
   const movies = useNowPlayingMovies();
    

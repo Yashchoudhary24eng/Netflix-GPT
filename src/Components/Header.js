@@ -66,10 +66,10 @@ const Header = () => {
         <img className='w-48 pt-2 ml-24' src='https://help.nflxext.com/helpcenter/OneTrust/oneTrust_production_2026-01-09/consent/87b6a5c0-0104-4e96-a291-092c11350111/019ae4b5-d8fb-7693-90ba-7a61d24a8837/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png' alt='photo_of_logo'/>
       
         <div className="flex justify-between">
-         {gptpage &&  
+         {user&&gptpage &&  
          <select className="m-6 px-2 bg-slate-200" onChange={updateLanguage}>
-          <option value="">Language</option>
-          {lan_select_option.map(data =>(<option value={data.identifier}>{data.name}</option>))}
+          <option value="en">Language</option>
+          {lan_select_option.map(data =>(<option key={data.identifier} value={data.identifier}>{data.name}</option>))}
         </select> 
          }
        
